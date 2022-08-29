@@ -13,14 +13,17 @@ public class CalendarTest {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("반복 횟수를 입력하세요.");
-		int n = sc.nextInt();
-		
-		for (int i=0; i<n; i++) {
+		while(true) {
 			System.out.println("달을 입력하세요.");
 			int month = sc.nextInt();
-		
-		System.out.printf("%d월은 %d일까지 있습니다.", month, getMaxDay(month));
+			if (month == -1) {
+				System.out.println("종료합니다.");
+				break;
+			}
+			System.out.printf("%d월은 %d일까지 있습니다.\n", month, getMaxDay(month));
 		}
+		
+		System.out.println("bye!");
+		sc.close();
 	}
 }
