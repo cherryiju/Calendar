@@ -20,7 +20,14 @@ public class CalendarTest {
 				System.out.println("종료합니다.");
 				break;
 			}
-			System.out.printf("%d월은 %d일까지 있습니다.\n", month, getMaxDay(month));
+			int n=1;
+			System.out.println(" 일 월 화 수 목 금 토");
+			for (int i=1; i<=getMaxDay(month); i++) {
+				if (i%7==0)
+					System.out.println();
+				System.out.printf("%3d", i);
+			}
+			System.out.println();
 		}
 		
 		System.out.println("bye!");
